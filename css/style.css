@@ -1,0 +1,235 @@
+body {
+	line-height: 1.2;
+	font-size: 24px;
+	background-color: #9E9C9C;
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper>main {
+	flex-grow: 1;
+}
+
+/* ============================ */
+
+.page {
+	padding: 50px;
+}
+
+.page__block {
+	margin-bottom: 50px;
+}
+
+/* ============================ */
+
+/*
+.table-wrapper{
+	overflow: auto;
+}
+.table-wrapper table{
+	min-width: 800px;
+}
+*/
+
+
+/* Відносні одиниці */
+/* REM EM */
+/* Розмір шрифту у браузері за замовченням - 16px */
+
+/* REM */
+/* 1 REM = шрифту за замовченням у браузері */
+
+/*
+.block{
+	font-size: 2rem;
+}
+*/
+/* EM */
+/* 1 EM = поточному або успаткованому розміру шрифту */
+
+.block {
+	font-size: 2rem;
+	/* 32px, якщо за замовченням 16px */
+	margin-bottom: 2em;
+}
+
+@media (max-width: 47.99875em) {
+	.block {
+		font-size: 1rem;
+	}
+}
+
+/* VW VH */
+/* 100VW - ширина в'юпорта */
+/* 100VH - висота в'юпорта */
+
+/* Додаткові CSS можливості */
+
+/* CSS змінні */
+
+/* Об'ява змінних */
+/*
+ :root {
+	--red: red;
+ }
+
+.block {
+	color: var(--red);
+}
+*/
+
+/* Calc */
+/*
+.block{
+	background-color: #7A956B;
+	width: calc(100% - 20px);
+}
+*/
+/* flex: 0 1 calc((100% - gap * (columns - 1)) / columns); */
+
+/* Цікаві властивості */
+
+/* cursor */
+/*
+.block {
+	cursor: move;
+}
+*/
+
+/* pointer-events */
+/*
+.block{
+	position: relative;
+}
+.block a{
+	text-decoration: underline;
+}
+.block::before{
+	width: 300px;
+	height: 300px;
+	content: "";
+	border-radius: 50%;
+	pointer-events:none;
+	top: 0;
+	left: 0;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 47.99875em) {
+	.block::before {
+		pointer-events: auto;
+	}
+}*/
+.page__container {}
+
+.video-1 p {
+	padding: 10px;
+}
+
+.video-2 p {
+	padding: 10px;
+}
+
+.video-3 p {
+	padding: 10px;
+}
+
+.video-4 p {
+	padding: 10px;
+}
+
+.title {
+	font-size: 40px;
+	margin: 20px;
+}
+
+/*==================================================*/
+.page {
+	padding: 3rem 0;
+	text-align: center;
+}
+
+.content {}
+
+.search {
+	display: inline-block;
+	text-align: center;
+}
+
+.search>*:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.search__text {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 18px;
+}
+
+.search__arrow {
+	width: 24px;
+	height: 24px;
+	align-self: center;
+}
+
+.search__button {
+	width: 24px;
+	height: 24px;
+	align-self: center;
+	transition: all 0.3s ease 0s;
+}
+
+.search__button:hover {
+	transform: scale(1.2, 1.2);
+}
+
+.search__form {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	max-width: 350px;
+	transform: translateX(-2000px);
+}
+
+.search.active .search__form {
+	transform: translateX(0);
+	animation: slideInRight 1.0s both;
+}
+
+@keyframes slideInRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+.search__label {}
+
+.search__input {
+	border: 2px solid darkblue;
+	border-radius: 10px;
+	padding: 5px 10px;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+.search__input:hover,
+.search__input:focus {
+	border: 2px solid #e64c3d;
+}
